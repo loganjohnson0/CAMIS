@@ -16,7 +16,6 @@ output:
 #| echo: false
 #| message: false
 #| warning: false
-#| message: false
 library(tidyverse)
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(

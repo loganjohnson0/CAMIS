@@ -3,7 +3,7 @@ title: "Group sequential design in East"
 ---
 
 ```{r}
-#| include=FALSE
+#| include: false
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -19,9 +19,9 @@ for a progression-free survival (PFS) endpoint, which has one interim analysis
 for both efficacy and non-binding futility:
 
 ```{r}
-#| echo=FALSE,
-#| fig.align="center",
-#| out.width="100%"
+#| echo: false
+#| fig-align: center
+#| output-width: 100%
 knitr::include_graphics("../images/gsd-tte/test-params-pfs.png")
 knitr::include_graphics("../images/gsd-tte/bounds-pfs.png")
 knitr::include_graphics("../images/gsd-tte/accrual-pfs.png")
@@ -30,9 +30,9 @@ knitr::include_graphics("../images/gsd-tte/accrual-pfs.png")
 The results are as follows:
 
 ```{r}
-#| echo=FALSE,
-#| fig.align="center",
-#| out.width="100%"
+#| echo: false
+#| fig-align: center
+#| output-width: 100%
 knitr::include_graphics("../images/gsd-tte/result-pfs.png")
 ```
 
