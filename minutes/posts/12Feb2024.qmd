@@ -11,7 +11,11 @@ output:
 
 # Attendees
 
-```{r attendees, echo=FALSE, message=FALSE,  warning=FALSE, }
+```{r }
+#| label: attendees
+#| echo: false
+#| message: false
+#| warning: false
 attend_list <- readr::read_csv("../CAMIS team members 2024.csv")
 knitr::kable(
        list(attend_list[c(1,3)]), "html")

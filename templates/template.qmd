@@ -7,7 +7,8 @@ Your choice to use part or all to fit your topic.*
 
 ## Data used
 
-```{eval = FALSE}
+```{eval}
+#| label: = FALSE
 data ExData; 
     input Var1 $ Var2 ...; 
     datalines; 

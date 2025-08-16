@@ -10,7 +10,9 @@ output:
 
 # Attendees
 
-```{r attendees, echo=FALSE}
+```{r}
+#| label: attendees
+#| echo: false
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(
        list(attend_list[,c(1,2)]))

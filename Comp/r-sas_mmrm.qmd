@@ -2,14 +2,16 @@
 title: "R vs SAS MMRM"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE, comment = "#>", out.width = "100%",
   dpi = 150, fig.path = "../images/mmrm/"
 )
 ```
 
-```{r review-setup}
+```{r}
+#| label: review-setup
 #| message: FALSE
 #| warning: FALSE
 #| include: FALSE
@@ -25,7 +27,8 @@ library(ggplot2)
 library(details)
 ```
 
-```{r load-data}
+```{r}
+#| label: load-data
 #| message: FALSE
 #| warning: FALSE
 #| include: FALSE
@@ -33,7 +36,8 @@ library(details)
 load('../data/cached_mmrm_results.rda')
 ```
 
-```{r set-seed}
+```{r}
+#| label: set-seed
 #| message: FALSE
 #| warning: FALSE
 #| include: FALSE
@@ -510,7 +514,8 @@ We next estimate the marginal mean treatment effects for each visit in the FEV a
 
 ### FEV Data
 
-```{r review-treatment-fev}
+```{r}
+#| label: review-treatment-fev
 #| message: FALSE
 #| warning: FALSE
 #| echo: FALSE
@@ -533,7 +538,8 @@ The R procedures' estimates are very similar to those output by `PROC GLIMMIX`, 
 
 ### BCVA Data
 
-```{r review-treatment-bcva}
+```{r}
+#| label: review-treatment-bcva
 #| message: FALSE
 #| warning: FALSE
 #| echo: FALSE
@@ -578,7 +584,11 @@ The results of the previous benchmark suggest that the amount of patients missin
 
 Ten datasets of 200 patients are generated each of the following levels of missingness: none, mild, moderate, and high. In all scenarios, observations are missing at random. The number patients observed at each visit is obtained for one replicated dataset at each level of missingness is presented in the table below.
 
-```{r review-missingness-table, warning=FALSE, message=FALSE, echo=FALSE}
+```{r}
+#| label: review-missingness-table
+#| warning: false
+#| message: false
+#| echo: false
 ## construct the table
 cached_mmrm_results$df_missingness |>
   kable(caption = "Number of patients per visit")
@@ -586,7 +596,8 @@ cached_mmrm_results$df_missingness |>
 
 The convergence rates of all implementations for stratified by missingness level is presented in the plot below.
 
-```{r review-convergence-rate-missingness}
+```{r}
+#| label: review-convergence-rate-missingness
 #| message: FALSE
 #| warning: FALSE
 #| echo: FALSE
