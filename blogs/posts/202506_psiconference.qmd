@@ -6,7 +6,7 @@ title: "PSI Conference 2025"
 #| echo: false
 #| fig-align: center
 #| out-width: 75%
-knitr::include_graphics("../images/202506PSI.jpg") 
+knitr::include_graphics("../images/202506PSI.jpg")
 ```
 
 The PSI Conference 2025 took place 8th-11th June 2025 in Wembley, London.
@@ -25,5 +25,5 @@ Please help to promote CAMIS by sharing the sticker below !
 #| echo: false
 #| fig-align: center
 #| out-width: 75%
- knitr::include_graphics("../images/2025stickers.png")
+knitr::include_graphics("../images/2025stickers.png")
 ```

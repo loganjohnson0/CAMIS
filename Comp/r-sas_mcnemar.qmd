@@ -19,9 +19,10 @@ In R,the {stats} or the {coin} package can be used to calculate McNemar. The {co
 
 ```{r}
 library(coin)
-colds <- 
+colds <-
   read.csv(
-    file = "../data/colds.csv")
+    file = "../data/colds.csv"
+  )
 freq_tbl <- table("age12" = colds$age12, "age14" = colds$age14)
 freq_tbl
 coin::mh_test(freq_tbl)
@@ -60,13 +61,19 @@ When calculating the odds ratio and risk difference confidence limits, SAS is no
 There is another R package that is sometimes used to calculate McNemar's, called `epibasix`. This package is no longer being maintained, and there was no documentation available for certain methods used. Therefore, the use of the `epibasix` package is advised against and other packages may be more suitable.
 
 ::: {.callout-note collapse="true" title="Session Info"}
+
 ```{r}
 #| echo: false
 si <- sessioninfo::session_info(
-  c("coin", "stats"), #Vector of packages used 
-  dependencies = FALSE)
-si$external <- structure(list("SAS" = "9.04.01M7P080520"), class = c("external_info", "list"))
+  c("coin", "stats"), #Vector of packages used
+  dependencies = FALSE
+)
+si$external <- structure(
+  list("SAS" = "9.04.01M7P080520"),
+  class = c("external_info", "list")
+)
 si
 ```
+
 :::
 

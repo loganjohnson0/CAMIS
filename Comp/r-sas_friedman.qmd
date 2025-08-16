@@ -4,9 +4,9 @@ title: "R vs SAS Non-parametric Analysis - Friedman test"
 
 ```{r}
 #| label: review-setup
-#| message: FALSE
-#| warning: FALSE
-#| eval: TRUE
+#| message: false
+#| warning: false
+#| eval: true
 library(tidyverse)
 library(rstatix) 
 library(ggpubr)
@@ -51,8 +51,8 @@ proc freq data=data_bp;
    tables patient*dos*bp / 
           cmh2 scores=rank noprint;
 run;
-
 ```
+
 ## Comparison
 
 The Row Mean Scores Differ statistic of SAS result is compared with statistic of R result, together with *p*-value.

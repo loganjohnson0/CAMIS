@@ -5,16 +5,19 @@ title: "R vs SAS MMRM"
 ```{r}
 #| include: false
 knitr::opts_chunk$set(
-  collapse = TRUE, comment = "#>", out.width = "100%",
-  dpi = 150, fig.path = "../images/mmrm/"
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%",
+  dpi = 150,
+  fig.path = "../images/mmrm/"
 )
 ```
 
 ```{r}
 #| label: review-setup
-#| message: FALSE
-#| warning: FALSE
-#| include: FALSE
+#| message: false
+#| warning: false
+#| include: false
 
 library(dplyr)
 library(purrr)
@@ -29,18 +32,18 @@ library(details)
 
 ```{r}
 #| label: load-data
-#| message: FALSE
-#| warning: FALSE
-#| include: FALSE
+#| message: false
+#| warning: false
+#| include: false
 
 load('../data/cached_mmrm_results.rda')
 ```
 
 ```{r}
 #| label: set-seed
-#| message: FALSE
-#| warning: FALSE
-#| include: FALSE
+#| message: false
+#| warning: false
+#| include: false
 
 set.seed(5123)
 ```
@@ -464,9 +467,9 @@ Next, the MMRM fitting procedures are compared using the FEV and BCVA datasets. 
 The `mmrm`, `PROC GLIMMIX`, `gls`, `lmer`, and `glmmTMB` functions are applied to the FEV dataset 10 times. The convergence times are recorded for each replicate and are reported in the table below.
 
 ```{r}
-#| message: FALSE
-#| warning: FALSE
-#| echo: FALSE
+#| message: false
+#| warning: false
+#| echo: false
 
 # format table in markdown
 cached_mmrm_results$conv_time_fev |>
@@ -478,7 +481,8 @@ cached_mmrm_results$conv_time_fev |>
     `Third Quartile` = upper
   ) |>
   knitr::kable(
-    caption = "Comparison of convergence times: milliseconds", digits = 2
+    caption = "Comparison of convergence times: milliseconds",
+    digits = 2
   )
 ```
 
@@ -489,9 +493,9 @@ It is clear from these results that `mmrm` converges significantly faster than o
 The MMRM implementations are now applied to the BCVA dataset 10 times. The convergence times are presented below.
 
 ```{r}
-#| message: FALSE
-#| warning: FALSE
-#| echo: FALSE
+#| message: false
+#| warning: false
+#| echo: false
 # format table in markdown
 cached_mmrm_results$conv_time_bcva |>
   arrange(median) |>
@@ -502,7 +506,8 @@ cached_mmrm_results$conv_time_bcva |>
     `Third Quartile` = upper
   ) |>
   knitr::kable(
-    caption = "Comparison of convergence times: seconds", digits = 2
+    caption = "Comparison of convergence times: seconds",
+    digits = 2
   )
 ```
 
@@ -516,9 +521,9 @@ We next estimate the marginal mean treatment effects for each visit in the FEV a
 
 ```{r}
 #| label: review-treatment-fev
-#| message: FALSE
-#| warning: FALSE
-#| echo: FALSE
+#| message: false
+#| warning: false
+#| echo: false
 # plot estimates
 ggplot(
   cached_mmrm_results$rel_diff_ests_tbl_fev,
@@ -540,9 +545,9 @@ The R procedures' estimates are very similar to those output by `PROC GLIMMIX`, 
 
 ```{r}
 #| label: review-treatment-bcva
-#| message: FALSE
-#| warning: FALSE
-#| echo: FALSE
+#| message: false
+#| warning: false
+#| echo: false
 # plot estimates
 ggplot(
   cached_mmrm_results$rel_diff_ests_tbl_bcva,
@@ -598,9 +603,9 @@ The convergence rates of all implementations for stratified by missingness level
 
 ```{r}
 #| label: review-convergence-rate-missingness
-#| message: FALSE
-#| warning: FALSE
-#| echo: FALSE
+#| message: false
+#| warning: false
+#| echo: false
 ## plot the convergence rates
 cached_mmrm_results$conv_rate |>
   mutate(
