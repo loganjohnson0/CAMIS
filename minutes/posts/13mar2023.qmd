@@ -3,22 +3,24 @@ title: "White Paper, Website, ONCO, Volunteers, Conferences"
 date: "13mar2023"
 output:
   html_document: 
-     toc: true
-     toc_float: false
-     toc_level: 5
-     df_print: paged
+    toc: true
+    toc_float: false
+    toc_level: 5
+    df_print: paged
 ---
 
 # Attendees
 
-```{r }
+```{r}
 #| label: attendees
 #| echo: false
 #| message: false
 #| warning: false
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(
-       list(attend_list[c(1,5)]), "html")
+  list(attend_list[c(1, 5)]),
+  "html"
+)
 ```
 
 # Agenda

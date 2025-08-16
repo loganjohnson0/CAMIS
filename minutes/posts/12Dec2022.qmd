@@ -3,9 +3,9 @@ title: "Restart Meeting"
 date: "12Dec2022"
 output:
   html_document: 
-     toc: true
-     toc_float: false
-     df_print: paged
+    toc: true
+    toc_float: false
+    df_print: paged
 ---
 
 # Attendees
@@ -15,7 +15,8 @@ output:
 #| echo: false
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(
-       list(attend_list[,c(1,2)]))
+  list(attend_list[, c(1, 2)])
+)
 ```
 
 # Welcome and brief CAMIS project update: Lyn

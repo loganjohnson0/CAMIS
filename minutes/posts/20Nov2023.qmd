@@ -3,22 +3,24 @@ title: "End of year summary, plan for 2024"
 date: "20 Nov 2023"
 output:
   html_document: 
-     toc: true
-     toc_float: false
-     toc_level: 5
-     df_print: paged
+    toc: true
+    toc_float: false
+    toc_level: 5
+    df_print: paged
 ---
 
 # Attendees
 
-```{r }
+```{r}
 #| label: attendees
 #| echo: false
 #| message: false
 #| warning: false
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(
-       list(attend_list[c(1,13)]), "html")
+  list(attend_list[c(1, 13)]),
+  "html"
+)
 ```
 
 # Agenda & Minutes
