@@ -11,7 +11,12 @@ output:
 
 # Attendees
 
-```{r list_attend, echo=FALSE, message=FALSE,  warning=FALSE, message=FALSE}
+```{r}
+#| label: list_attend
+#| echo: false
+#| message: false
+#| warning: false
+#| message: false
 library(tidyverse)
 attend_list <- readr::read_csv("../CAMIS team members.csv")
 knitr::kable(
